@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'faker'
 gem 'bootstrap', '~> 4.1.3'
 gem 'sprockets-rails'
+gem 'jquery-rails'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
