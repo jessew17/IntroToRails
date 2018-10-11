@@ -8,34 +8,34 @@
 
 
 # Seeding characters
-200.times do 
-  Character.create (
-    :name => Faker::ElderScrolls.name.unique,
+for n in Faker::ElderScrolls.unique.name
+  Character.create(
+    :name => n,
     :race => Faker::ElderScrolls.race
   )
 end
 
 #Seeding Creatures
-for c in Faker::ElderScrolls.creature.unique do
+for c in Faker::ElderScrolls.unique.creature do
   Creature.create(:type => c)
 end
 
 #Seeding Dragons
-for d in Faker::ElderScrolls.dragon.unique do
+for d in Faker::ElderScrolls.unique.dragon do
   Creature.create(:type => d)
 end
 
 #Seeding Scenarios
-for r in Faker::ElderScrolls.region.unique do
+for r in Faker::ElderScrolls.unique.region do
   Scenario.create(
     :region => r,
-    :city => Faker::ElderScrolls.city.unique,
+    :city => Faker::ElderScrolls.unique.city,
     :difficulty => Faker::Number.within(0..1)
     )
 end
 
 #Seeding Stats
-for r in Faker::ElderScrolls.race.unique do
+for r in Faker::ElderScrolls.unique.race do
   Stat.create(
     :type => r,
     :hp => Faker::Number.between(50..100),
@@ -44,7 +44,7 @@ for r in Faker::ElderScrolls.race.unique do
     )
 end
 
-for c in Faker::ElderScrolls.creature.unique do
+for c in Faker::ElderScrolls.unique.creature do
   Stat.create(
     :type => c,
     :hp => Faker::Number.between(50..100),
@@ -53,7 +53,7 @@ for c in Faker::ElderScrolls.creature.unique do
     )
 end
 
-for d in Faker::ElderScrolls.dragon.unique do
+for d in Faker::ElderScrolls.unique.dragon do
   Stat.create(
     :type => d,
     :hp => Faker::Number.between(40..75),
