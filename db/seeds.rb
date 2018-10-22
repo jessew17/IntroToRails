@@ -16,12 +16,12 @@
 end
 
 #Seeding Creatures
-30.times do
+35.times do
   Creature.create(:name => Faker::ElderScrolls.unique.creature)
 end
 
 #Seeding Dragons
-15.times do 
+10.times do 
   Creature.create(:name => Faker::ElderScrolls.unique.dragon)
 end
 
@@ -30,7 +30,7 @@ end
   Scenario.create(
     :region => Faker::ElderScrolls.unique.region,
     :city => Faker::ElderScrolls.unique.city,
-    :difficulty => Faker::Number.within(0..1)
+    :difficulty => Faker::Number.between(0, 1)
     )
 end
 
@@ -38,26 +38,26 @@ end
 10.times do
   Stat.create(
     :species => Faker::ElderScrolls.unique.race,
-    :hp => Faker::Number.between(50..100),
-    :attack => Faker::Number.between(6..17),
-    :armor => Faker::Number.between(5..25)
+    :hp => Faker::Number.between(50, 100),
+    :attack => Faker::Number.between(6, 17),
+    :armor => Faker::Number.between(5, 25)
     )
 end
 
-Creature.each do |c|
+Creature.all.each do |c|
   Stat.create(
     :species => c.name,
-    :hp => Faker::Number.between(50..100),
-    :attack => Faker::Number.between(1..9),
-    :armor => Faker::Number.between(0..5)
+    :hp => Faker::Number.between(50, 100),
+    :attack => Faker::Number.between(1, 9),
+    :armor => Faker::Number.between(0, 5)
     )
 end
 
-Dragon.each do |d|
+Dragon.all.each do |d|
   Stat.create(
     :species => d.name,
-    :hp => Faker::Number.between(40..75),
-    :attack => Faker::Number.between(3..12),
-    :armor => Faker::Number.between(0..10)
+    :hp => Faker::Number.between(40, 75),
+    :attack => Faker::Number.between(3, 12),
+    :armor => Faker::Number.between(0, 10)
     )
 end
