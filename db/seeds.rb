@@ -46,7 +46,7 @@ end
 
 Creature.each do |c|
   Stat.create(
-    :species => c.type,
+    :species => c.name,
     :hp => Faker::Number.between(50..100),
     :attack => Faker::Number.between(1..9),
     :armor => Faker::Number.between(0..5)
@@ -55,7 +55,7 @@ end
 
 Dragon.each do |d|
   Stat.create(
-    :species => d.type,
+    :species => d.name,
     :hp => Faker::Number.between(40..75),
     :attack => Faker::Number.between(3..12),
     :armor => Faker::Number.between(0..10)

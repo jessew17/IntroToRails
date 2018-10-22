@@ -20,13 +20,13 @@ ActiveRecord::Schema.define(version: 2018_10_10_202700) do
   end
 
   create_table "creatures", force: :cascade do |t|
-    t.string "type"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "dragons", force: :cascade do |t|
-    t.string "type"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2018_10_10_202700) do
   end
 
   create_table "stats", force: :cascade do |t|
-    t.string "type"
+    t.string "species"
     t.integer "hp"
     t.integer "attack"
     t.integer "armor"
