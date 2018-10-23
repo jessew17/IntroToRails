@@ -1,2 +1,12 @@
 <h1>Dragon#index</h1>
 <p>Find me in app/views/dragon/index.html.erb</p>
+<table>
+  <th>
+    <td>Name</td>
+  </th>
+  <% @allDragons.each do |d| %>
+    <tr>
+      <td><%= d.name %></td>
+    </tr>
+  <% end %>
+</table>

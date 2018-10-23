@@ -22,7 +22,7 @@ end
 
 #Seeding Dragons
 10.times do 
-  Creature.create(:name => Faker::ElderScrolls.unique.dragon)
+  Dragon.create(:name => Faker::ElderScrolls.unique.dragon)
 end
 
 #Seeding Scenarios
@@ -35,7 +35,7 @@ end
 end
 
 #Seeding Stats
-10.times do
+12.times do
   Stat.create(
     :species => Faker::ElderScrolls.unique.race,
     :hp => Faker::Number.between(50, 100),
@@ -47,7 +47,7 @@ end
 Creature.all.each do |c|
   Stat.create(
     :species => c.name,
-    :hp => Faker::Number.between(50, 100),
+    :hp => Faker::Number.between(25, 50),
     :attack => Faker::Number.between(1, 9),
     :armor => Faker::Number.between(0, 5)
     )

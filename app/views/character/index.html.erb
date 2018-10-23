@@ -1,2 +1,14 @@
 <h1>Character#index</h1>
 <p>Find me in app/views/character/index.html.erb</p>
+<table>
+  <th>
+    <td>Name</td>
+    <td>Race</td>
+  </th>
+  <% @allCharacters.each do |c| %>
+    <tr>
+      <td><%= c.name %></td>
+      <td><%= c.race %></td>
+    </tr>
+  <% end %>
+</table>

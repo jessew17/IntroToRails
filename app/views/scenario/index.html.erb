@@ -1,2 +1,16 @@
 <h1>Scenario#index</h1>
 <p>Find me in app/views/scenario/index.html.erb</p>
+<table>
+  <th>
+    <td>Region</td>
+    <td>City</td>
+    <td>Difficulty</td>
+  </th>
+  <% @allScenarios.each do |s| %>
+    <tr>
+      <td><%= s.region %></td>
+      <td><%= s.city %></td>
+      <td><%= s.difficulty %></td>
+    </tr>
+  <% end %>
+</table>

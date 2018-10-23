@@ -4,5 +4,6 @@ class CharacterController < ApplicationController
   end
 
   def show
+    @allCharacters = Character.all
   end
 end
