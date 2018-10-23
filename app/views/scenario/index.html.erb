@@ -8,9 +8,14 @@
   </th>
   <% @allScenarios.each do |s| %>
     <tr>
+      
       <td><%= s.region %></td>
       <td><%= s.city %></td>
-      <td><%= s.difficulty %></td>
+      <% if(s.difficulty == 0) %>
+        <td>Easy</td>
+      <% else  %>
+        <td>Hard</td>
+      <% end %>
     </tr>
   <% end %>
 </table>
