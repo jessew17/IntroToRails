@@ -1,7 +1,7 @@
 class Stat < ApplicationRecord
-  has_many :dragons
-  has_many :creatures
-  has_many :characters
+  has_many :dragon
+  has_many :creature
+  has_many :character
   validates :species, :hp, :attack, :armor, presence: true
   validates :species, uniqueness: true
 end
