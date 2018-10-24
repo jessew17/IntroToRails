@@ -4,5 +4,6 @@ class ScenarioController < ApplicationController
   end
 
   def show
+    @scenario = Scenario.find_by(region: params[:region])
   end
 end

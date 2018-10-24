@@ -4,5 +4,6 @@ class CreatureController < ApplicationController
   end
 
   def show
+    @creature = Creature.find_by(name: params[:name])
   end
 end

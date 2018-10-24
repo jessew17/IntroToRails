@@ -9,7 +9,7 @@
   <% @allScenarios.each do |s| %>
     <tr>
       
-      <td><%= s.region %></td>
+      <td><%= link_to s.region, scenario_path(s.region) %></td>
       <td><%= s.city %></td>
       <% if(s.difficulty == 0) %>
         <td>Easy</td>

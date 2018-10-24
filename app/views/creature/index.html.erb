@@ -6,7 +6,7 @@
   </th>
   <% @allCreatures.each do |c| %>
     <tr>
-      <td><%= c.name %></td>
+      <td><%= link_to c.name, creature_path(c.name) %></td>
     </tr>
   <% end %>
 </table>

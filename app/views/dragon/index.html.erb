@@ -6,7 +6,7 @@
   </th>
   <% @allDragons.each do |d| %>
     <tr>
-      <td><%= d.name %></td>
+      <td><%= link_to d.name, dragon_path(d.name) %></td>
     </tr>
   <% end %>
 </table>

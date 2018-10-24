@@ -9,7 +9,7 @@
   </th>
   <% @allStats.each do |s| %>
     <tr>
-      <td><%= s.species %></td>
+      <td><%= link_to s.species, stat_path(s.species) %></td>
       <td><%= s.hp %></td>
       <td><%= s.attack %></td>
       <td><%= s.armor %></td>

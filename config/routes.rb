@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
-  get 'about' => 'welcome#about'
-  get 'scenarios' => 'scenario#index'
-  get 'scenario/show'
-  get 'stats' => 'stat#index'
-  get 'stat/show'
-  get 'dragons' => 'dragon#index'
-  get 'dragon/show'
-  get 'creatures' => 'creature#index'
-  get 'creature/show'
-  get 'characters' => 'character#index'
-  get 'character/show'
+  get 'about' => 'welcome#about', as: 'about'
+  get 'scenarios' => 'scenario#index', as: 'scenarios'
+  get 'scenario/:region' => 'scenario#show', as: 'scenario'
+  get 'stats' => 'stat#index', as: 'stats'
+  get 'stat/:species' => 'stat#show', as: 'stat'
+  get 'dragons' => 'dragon#index', as: 'dragons'
+  get 'dragon/:name' => 'dragon#show', as: 'dragon'
+  get 'creatures' => 'creature#index', as: 'creatures'
+  get 'creature/:name' => 'creature#show', as: 'creature'
+  get 'characters' => 'character#index', as: 'characters'
+  get 'character/:name' => 'character#show', as: 'character'
   resources :characters
   resources :creatures
   resources :dragons

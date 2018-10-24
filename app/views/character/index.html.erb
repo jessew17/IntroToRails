@@ -7,7 +7,7 @@
   </th>
   <% @allCharacters.each do |c| %>
     <tr>
-      <td><%= c.name %></td>
+      <td><%= link_to c.name, character_path(c.name) %></td>
       <td><%= c.race %></td>
     </tr>
   <% end %>

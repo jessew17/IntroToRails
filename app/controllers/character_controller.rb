@@ -4,6 +4,6 @@ class CharacterController < ApplicationController
   end
 
   def show
-    @allCharacters = Character.all
+    @character = Character.find_by(name: params[:name])
   end
 end

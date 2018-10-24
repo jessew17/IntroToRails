@@ -4,5 +4,6 @@ class DragonController < ApplicationController
   end
 
   def show
+    @dragon = Dragon.find_by(name: params[:name])
   end
 end
