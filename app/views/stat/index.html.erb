@@ -1,12 +1,11 @@
-<h1>Stat#index</h1>
-<p>Find me in app/views/stat/index.html.erb</p>
-<table>
-  <th>
-    <td>Species</td>
-    <td>HP</td>
-    <td>Attack</td>
-    <td>Armor</td>
-  </th>
+<h1>All Stats</h1>
+<table class="table table-bordered">
+  <tr>
+    <th>Species</th>
+    <th>HP</th>
+    <th>Attack</th>
+    <th>Armor</th>
+  </tr>
   <% @allStats.each do |s| %>
     <tr>
       <td><%= link_to s.species, stat_path(s.species) %></td>

@@ -1,9 +1,8 @@
-<h1>Dragon#index</h1>
-<p>Find me in app/views/dragon/index.html.erb</p>
-<table>
-  <th>
-    <td>Name</td>
-  </th>
+<h1>All Dragons</h1>
+<table class="table table-bordered">
+  <tr>
+    <th>Name</th>
+  </tr>
   <% @allDragons.each do |d| %>
     <tr>
       <td><%= link_to d.name, dragon_path(d.name) %></td>

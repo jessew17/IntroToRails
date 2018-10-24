@@ -1,9 +1,8 @@
-<h1>Creature#index</h1>
-<p>Find me in app/views/creature/index.html.erb</p>
-<table>
-  <th>
-    <td>Name</td>
-  </th>
+<h1>All Creatures</h1>
+<table class="table table-bordered">
+  <tr>
+    <th>Name</th>
+  </tr>
   <% @allCreatures.each do |c| %>
     <tr>
       <td><%= link_to c.name, creature_path(c.name) %></td>

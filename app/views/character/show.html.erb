@@ -1,7 +1,6 @@
-<h1>Character#show</h1>
-<p>Find me in app/views/character/show.html.erb</p>
 
-<h4>Name: <%= @character.name %></h4>
+<h1><%= @character.name %></h1>
+<br/>
 <h4>Race: <%= @character.race %></h4>
 <% @stats = Stat.find_by(species: @character.race) %>
 <h4>HP: <%= @stats.hp %></h4>

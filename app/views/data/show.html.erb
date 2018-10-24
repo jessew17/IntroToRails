@@ -1,0 +1,36 @@
+<h1>Displaying and Navigating all data</h1>
+
+<h3><%= link_to "Characters", characters_path %></h3>
+<ul class="list-group">
+<% Character.all.each do |c| %>
+  <li class="list-group-item"><%= c.name %></li>
+<% end %>
+</ul>
+
+<h3><%= link_to "Creatures", creatures_path %></h3>
+<ul class="list-group">
+<% Creature.all.each do |c| %>
+  <li class="list-group-item"><%= c.name %></li>
+<% end %>
+</ul>
+
+<h3><%= link_to "Dragons", dragons_path %></h3>
+<ul class="list-group">
+<% Dragon.all.each do |d| %>
+  <li class="list-group-item"><%= d.name %></li>
+<% end %>
+</ul>
+
+<h3><%= link_to "Scenarios", scenarios_path %></h3>
+<ul class="list-group">
+<% Scenario.all.each do |s| %>
+  <li class="list-group-item"><%= s.region %></li>
+<% end %>
+</ul>
+
+<h3><%= link_to "Stats", stats_path %></h3>
+<ul class="list-group">
+<% Stat.all.each do |s| %>
+  <li class="list-group-item"><%= s.species %></li>
+<% end %>
+</ul>

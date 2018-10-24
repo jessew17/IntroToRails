@@ -1,16 +1,14 @@
-<h1>Stat#show</h1>
-<p>Find me in app/views/stat/show.html.erb</p>
-
-<h4>Species: <%= @stat.species %></h4>
+<h1><%= @stat.species %></h1>
+<br/>
 <h4>HP: <%= @stat.hp %></h4>
 <h4>Armor: <%= @stat.armor %></h4>
 <h4>Attack: <%= @stat.attack %></h4>
 <% @characters = Character.all.where("race = ?", @stat.species)%>
 <% if(@characters.count > 0) %>
   <h4>All Characters with this stat set</h4>
-  <ul>
+  <ul class="list-group">
     <% @characters.each do |c| %>
-      <li><h6><%= c.name %></h6></li>
+      <li class="list-group-item"><h6><%= c.name %></h6></li>
     <% end %>
   </ul>
 <% end %>

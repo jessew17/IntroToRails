@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'searach' => 'data#search', as: 'search'
+  get 'data' => 'data#show', as: 'data'
+  get 'welcome/index', as: 'home'
+  root'welcome#index'
   get 'about' => 'welcome#about', as: 'about'
   get 'scenarios' => 'scenario#index', as: 'scenarios'
   get 'scenario/:region' => 'scenario#show', as: 'scenario'
