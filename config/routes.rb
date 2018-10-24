@@ -1,13 +1,19 @@
 Rails.application.routes.draw do
-  get 'scenario/index'
+  get 'about' => 'welcome#about'
+  get 'scenarios' => 'scenario#index'
   get 'scenario/show'
-  get 'stat/index'
+  get 'stats' => 'stat#index'
   get 'stat/show'
-  get 'dragon/index'
+  get 'dragons' => 'dragon#index'
   get 'dragon/show'
-  get 'creature/index'
+  get 'creatures' => 'creature#index'
   get 'creature/show'
-  get 'character/index'
+  get 'characters' => 'character#index'
   get 'character/show'
+  resources :characters
+  resources :creatures
+  resources :dragons
+  resources :scenarios
+  resources :stats
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
