@@ -13,6 +13,7 @@
     <div class="container">
       <header class="navbar  navbar-inverse">
         <ul class="nav navbar-nav">
+          <li><%=link_to "HOME", home_path%></li>
           <li><%=link_to "DATA", data_path%></li>
           <li><%=link_to "ABOUT", about_path%></li>
           <%= form_tag(search_path, :method => "get", id: "search-form") do %>

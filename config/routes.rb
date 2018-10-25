@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'searach' => 'data#search', as: 'search'
+  get 'search' => 'data#search', as: 'search'
   get 'data' => 'data#show', as: 'data'
   get 'welcome/index', as: 'home'
   root'welcome#index'
