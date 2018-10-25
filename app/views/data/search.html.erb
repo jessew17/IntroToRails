@@ -1,2 +1,22 @@
-<h1>Data#search</h1>
-<p>Find me in app/views/data/search.html.erb</p>
+
+<h2>Seach form</h2>
+
+<u class="list-group">
+  <% @characters.each do |c| %>
+    <li class="list-group-item"><%= link_to c.name, character_path(c.name) %>
+    <%= c.race %></li>
+  <% end %>
+
+  <% @creatures.each do |c| %>
+    <li class="list-group-item"><%= link_to c.name, creature_path(c.name) %></li>
+  <% end %>
+
+  <% @dragons.each do |d| %>
+    <li class="list-group-item"><%= link_to d.name, dragon_path(d.name) %></li>
+  <% end %>
+
+  <% @scenarios.each do |s| %>
+    <li class="list-group-item"><%= link_to s.region, scenario_path(s.region) %>
+    <%= s.city %></li>
+  <% end %>
+</ul>
